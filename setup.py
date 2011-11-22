@@ -4,8 +4,11 @@
 setup.py file for SWIG example
 """
 
-import sys
+from distutils.core import setup, Extension
+import os
 import os.path
+import sys
+
 
 def get_rootdir():
     return '/home/users/okazaki/local'
@@ -14,10 +17,11 @@ def get_includedir():
 def get_librarydir():
     return os.path.join(get_rootdir(), 'lib')
 
-import os; os.environ['CC'] = 'g++'; os.environ['CXX'] = 'g++';
-os.environ['CPP'] = 'g++'; os.environ['LDSHARED'] = 'g++'
+os.environ['CC'] = 'g++'
+os.environ['CXX'] = 'g++'
+os.environ['CPP'] = 'g++'
+os.environ['LDSHARED'] = 'g++'
 
-from distutils.core import setup, Extension
 
 crfsuite_module = Extension(
     '_crfsuite',
@@ -34,11 +38,11 @@ crfsuite_module = Extension(
     )
 
 setup(
-    name = '@PACKAGE@',
-    version = '@VERSION@',
-    author = 'Naoaki Okazaki',
-    description = """CRFSuite Python module""",
-    ext_modules = [crfsuite_module],
-    py_modules = ["crfsuite"],
+        name = 'crfsuite',
+        version = '0.12',
+        author = 'Naoaki Okazaki',
+        description = """CRFSuite Python module""",
+        ext_modules = [crfsuite_module],
+        py_modules = ["crfsuite"],
     )
 
