@@ -26,14 +26,11 @@ os.environ['LDSHARED'] = 'g++'
 crfsuite_module = Extension(
     '_crfsuite',
     sources = [
-        'crfsuite.cpp',
-        'export_wrap.cpp',
+            'swig/crfsuite.cpp',
+            'swig/python/export_wrap.cpp',
         ],
-#    include_dirs=['../../include',],
     extra_link_args=['-shared'],
-#    library_dirs=['../../lib/crf',],
     libraries=['crfsuite'],
-#    extra_objects=['../../lib/crf/libcrfsuite.la'],
     language='c++',
     )
 
