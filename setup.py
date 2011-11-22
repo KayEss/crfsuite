@@ -16,16 +16,12 @@ def get_includedir():
 def get_librarydir():
     return os.path.join(get_rootdir(), 'lib')
 
-os.environ['CC'] = 'g++'
-os.environ['CXX'] = 'g++'
-os.environ['CPP'] = 'g++'
-os.environ['LDSHARED'] = 'g++'
-
 
 crfsuite_module = Extension(
         '_crfsuite',
         sources = [
-                'swig/export.i',
+                'swig/crfsuite.cpp',
+                'swig/python/export_wrap.cpp',
             ],
         swig_opts=['-c++', '-Iinclude'],
         include_dirs=['include'],
