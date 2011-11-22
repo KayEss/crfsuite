@@ -24,14 +24,14 @@ os.environ['LDSHARED'] = 'g++'
 
 
 crfsuite_module = Extension(
-    '_crfsuite',
-    sources = [
-            'swig/crfsuite.cpp',
-            'swig/python/export_wrap.cpp',
-        ],
-    extra_link_args=['-shared'],
-    libraries=['crfsuite'],
-    language='c++',
+        '_crfsuite',
+        sources = [
+                'swig/crfsuite.cpp',
+                'swig/python/export_wrap.cpp',
+            ],
+        extra_link_args=['-shared'],
+        libraries=['crfsuite'],
+        language='c++',
     )
 
 setup(
