@@ -6,12 +6,11 @@ setup.py file for SWIG example
 
 from distutils.core import setup, Extension
 import os
-import os.path
 import sys
 
 
 def get_rootdir():
-    return '/home/users/okazaki/local'
+    return os.path.dirname(__file__)
 def get_includedir():
     return os.path.join(get_rootdir(), 'include')
 def get_librarydir():
@@ -26,11 +25,11 @@ os.environ['LDSHARED'] = 'g++'
 crfsuite_module = Extension(
         '_crfsuite',
         sources = [
-                'swig/crfsuite.cpp',
-                'swig/python/export_wrap.cpp',
+                'swig/export.i',
             ],
+        swig_opts=['-c++', '-Iinclude'],
+        include_dirs=['include'],
         extra_link_args=['-shared'],
-        libraries=['crfsuite'],
         language='c++',
     )
 
