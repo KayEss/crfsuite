@@ -22,6 +22,7 @@ crfsuite_module = Extension(
         sources = [
                 'swig/crfsuite.cpp',
                 'swig/python/export_wrap.cpp',
+
                 'lib/crf/src/crf1d_context.c',
                 'lib/crf/src/dataset.c',
                 'lib/crf/src/train_arow.c',
@@ -40,7 +41,12 @@ crfsuite_module = Extension(
                 'lib/crf/src/crfsuite.c',
                 'lib/crf/src/quark.c',
                 'lib/crf/src/crfsuite_train.c',
-                'lib/crf/src/rumavl.c'
+                'lib/crf/src/rumavl.c',
+
+                'lib/cqdb/src/cqdb.c',
+                'lib/cqdb/src/lookup3.c',
+
+                'liblbfgs/lib/lbfgs.c',
             ],
         swig_opts=['-c++', '-Iinclude'],
         include_dirs=[
