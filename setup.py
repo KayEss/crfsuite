@@ -59,6 +59,7 @@ setup(
         name = 'crfsuite',
         version = '0.12',
         author = 'Naoaki Okazaki',
+        maintainer = 'Kirit Saelensminde',
         description = """CRFSuite Python module""",
         ext_modules = [crfsuite_module],
         package_dir = {
