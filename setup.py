@@ -36,7 +36,7 @@ crfsuite_module = Extension(
                 'lib/crf/src/train_lbfgs.c',
                 'lib/crf/src/crf1d_tag.c',
                 'lib/crf/src/params.c',
-                'lib/crf/src/train_passive_aggressive.c'
+                'lib/crf/src/train_passive_aggressive.c',
                 'lib/crf/src/crfsuite.c',
                 'lib/crf/src/quark.c',
                 'lib/crf/src/crfsuite_train.c',
