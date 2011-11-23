@@ -61,6 +61,8 @@ setup(
         author = 'Naoaki Okazaki',
         description = """CRFSuite Python module""",
         ext_modules = [crfsuite_module],
+        package_dir = {
+            '': 'swig/python'},
         py_modules = ["crfsuite"],
     )
 
