@@ -57,7 +57,7 @@ crfsuite_module = Extension(
 
 setup(
         name = 'crfsuite',
-        version = '0.12',
+        version = '0.12.1',
         author = 'Naoaki Okazaki',
         maintainer = 'Kirit Saelensminde',
         description = """CRFSuite Python module""",
