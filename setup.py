@@ -43,7 +43,8 @@ crfsuite_module = Extension(
                 'lib/crf/src/rumavl.c'
             ],
         swig_opts=['-c++', '-Iinclude'],
-        include_dirs=['lib/cqdb/include', 'include'],
+        include_dirs=[
+            'lib/cqdb/include', 'liblbfgs/include', 'include'],
         extra_link_args=['-shared'],
         language='c++',
     )
